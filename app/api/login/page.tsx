@@ -8,7 +8,7 @@ export default function Login() {
   const callbackUrl = searchParams.get("callbackUrl") || "/profile"; // 2⃣
 
   return (
-    <button onClick={() => signIn("google", { callbackUrl })}> // 3⃣
+    <button onClick={() => signIn("google", { callbackUrl })}>
       Login With Google
     </button>
   );
