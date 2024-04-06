@@ -1,18 +1,11 @@
-import { signIn } from "next-auth/react";
+"use client";
+
+import { signIn } from "next-auth/react"; // 1⃣
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react"; // Suspenseをインポート
 
 export default function Login() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <LoginForm />
-    </Suspense>
-  );
-}
-
-function LoginForm() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/profile";
+  const callbackUrl = searchParams.get("callbackUrl") || "/profile"; // 2⃣
 
   return (
     <button onClick={() => signIn("google", { callbackUrl })}>
