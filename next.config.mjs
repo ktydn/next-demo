@@ -12,4 +12,14 @@ const nextConfig = {
   },
 };
 
+module.exports = {
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    NEXT_PUBLIC_GOOGLE_CLIENT_ID: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+    NEXT_PUBLIC_GOOGLE_CLIENT_SECRET:
+      process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
+  },
+};
+
 export default nextConfig;
