@@ -1,6 +1,6 @@
-import { Suspense } from 'react'
-import Loading from './loading'
-import WaitComponent from './wait'
+import { Suspense } from "react";
+import Loading from "./loading";
+import WaitComponent from "./wait";
 
 export default function Page() {
   return (
@@ -10,5 +10,5 @@ export default function Page() {
         <WaitComponent />
       </Suspense>
     </div>
-  )
+  );
 }
